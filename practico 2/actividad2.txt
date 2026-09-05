@@ -1,0 +1,14 @@
+Error 1 → “Priorizar Pedido Retrasado” no estado final.
+Error 2 → “Pagar Producto” se comunica con “Recibir Pago” de manera incorrecta ya que son de pools distintos.
+Error 3 → “Ordenar Producto” es una tarea de tipo throw Message que va hacia un evento de tipo throw en lugar de catch.
+Error 4 → “Ordenar Producto” es una tarea de tipo throw Message que va hacia un evento en lugar de ser un evento hacia otro.
+Error 5 → “Iniciar Selección de Producto Online”, “Seleccionar Producto Online” y “Ordenar Producto” son tres tareas que pueden ser condensadas en una.
+Error 6 → “Enviar Queja” es una tarea de tipo throw Message que va hacia un evento en lugar de ser un evento hacia otro.
+Error 7 → “efectivo?” es una Gateway pero solo tiene 1 opción.
+Error 8 → “Entregar Producto” es una tarea de tipo throw Message que va hacia un evento en lugar de ser un evento hacia otro.
+Error 9 → “Recibir Pago” es una tarea de tipo Service pero deberia ser Manual.
+Error 10 → “Entregar Producto” se comunica con otra pool con el tipo de flecha incorrecto.
+Error 11 → Varias tareas no tienen su tipo asignado.
+Error 12 → “Entregar Pedido” no tiene estado final.
+Error 13 → “Entregar Pedido” tiene un estado inicial previo al mismo que hace que inicie el proceso de la nada.
+Error 14 → Local no tiene estado inicial siendo el que recibe.

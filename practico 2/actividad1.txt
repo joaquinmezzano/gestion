@@ -1,0 +1,9 @@
+1. “Usar la menor cantidad posible de elementos” → Debe ser aplicada ya que hay varios procesos que pueden ser acumulados en uno solo como ‘Proponer nuevo cargo’, ‘Discutir necesidad de cargo’ y ‘Decidir realización del llamado’ que podrian ser puestos en un solo elemento.
+2. “Minimizar los caminos de ruteo para cada elemento” → No hace falta aplicarla, solo hay 1 camino por elemento.
+3. “Usar un inicio y un final en cada proceso” → No hace falta aplicarla, cada proceso y pool tienen su inicio y fin. 
+4. “Modelar de la forma más estructurada posible” → No hace falta aplicarla, el modelo es suficientemente chico.
+5. “Evitar el uso de compuertas OR” → Se puede aplicar, hay 1 compuerta OR pero esta es necesaria para el funcionamiento del modelo.
+6. “Utilizar etiquetas de tipo ‘verbales’ ” → No hace falta aplicarla, las etiquetas son suficientemente verbales.
+7. “Descomponer el modelo si tiene más de 50 elementos” → No hace falta aplicarla, no tiene más de 50.
+
+No hay ciclos arbitrarios, “Arbitrary Cicles”.
