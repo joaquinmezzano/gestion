@@ -48,11 +48,11 @@
         <flowNodeRef>_62</flowNodeRef>
       </lane>
     </laneSet>
-    <task completionQuantity="1" id="_25" isForCompensation="false" name="Esperando&#10;pedido" startQuantity="1">
+    <receiveTask completionQuantity="1" id="_25" implementation="##WebService" instantiate="false" isForCompensation="false" name="Esperando&#10;pedido" startQuantity="1">
       <incoming>_26</incoming>
       <incoming>_39</incoming>
       <outgoing>_31</outgoing>
-    </task>
+    </receiveTask>
     <sequenceFlow id="_26" sourceRef="_12" targetRef="_25"/>
     <startEvent id="_12" isInterrupting="true" parallelMultiple="false">
       <extensionElements>
@@ -62,10 +62,10 @@
       <outputSet/>
     </startEvent>
     <sequenceFlow id="_31" sourceRef="_25" targetRef="_30"/>
-    <task completionQuantity="1" id="_32" isForCompensation="false" name="Registrar&#10;pedido" startQuantity="1">
+    <userTask completionQuantity="1" id="_32" implementation="##unspecified" isForCompensation="false" name="Registrar&#10;pedido" startQuantity="1">
       <incoming>_33</incoming>
       <outgoing>_36</outgoing>
-    </task>
+    </userTask>
     <sequenceFlow id="_33" sourceRef="_30" targetRef="_32"/>
     <intermediateCatchEvent id="_30" name="Recibir&#10;pedido" parallelMultiple="false">
       <incoming>_31</incoming>
@@ -79,25 +79,25 @@
       <outgoing>_39</outgoing>
     </parallelGateway>
     <sequenceFlow id="_36" sourceRef="_32" targetRef="_35"/>
-    <task completionQuantity="1" id="_37" isForCompensation="false" name="Recibir&#10;pedido" startQuantity="1">
+    <userTask completionQuantity="1" id="_37" implementation="##unspecified" isForCompensation="false" name="Recibir&#10;pedido" startQuantity="1">
       <incoming>_38</incoming>
       <outgoing>_41</outgoing>
-    </task>
+    </userTask>
     <sequenceFlow id="_38" sourceRef="_35" targetRef="_37">
       <extensionElements>
         <yaoqiang:style edgeStyle="elbowEdgeStyle" elbow="vertical" shape="connector"/>
       </extensionElements>
     </sequenceFlow>
     <sequenceFlow id="_39" sourceRef="_35" targetRef="_25"/>
-    <task completionQuantity="1" id="_40" isForCompensation="false" name="Preparar&#10;pedido" startQuantity="1">
+    <userTask completionQuantity="1" id="_40" implementation="##unspecified" isForCompensation="false" name="Preparar&#10;pedido" startQuantity="1">
       <incoming>_41</incoming>
       <outgoing>_43</outgoing>
-    </task>
+    </userTask>
     <sequenceFlow id="_41" sourceRef="_37" targetRef="_40"/>
-    <task completionQuantity="1" id="_42" isForCompensation="false" name="Recibir e ir&#10;a la casa&#10;del cliente" startQuantity="1">
+    <userTask completionQuantity="1" id="_42" implementation="##unspecified" isForCompensation="false" name="Recibir e ir&#10;a la casa&#10;del cliente" startQuantity="1">
       <incoming>_43</incoming>
       <outgoing>_45</outgoing>
-    </task>
+    </userTask>
     <sequenceFlow id="_43" sourceRef="_40" targetRef="_42"/>
     <intermediateThrowEvent id="_44" name="Entregar">
       <incoming>_45</incoming>
@@ -123,10 +123,10 @@
     <sequenceFlow id="_63" sourceRef="_59" targetRef="_62"/>
   </process>
   <process id="PROCESS_2" isClosed="false" isExecutable="true" processType="None">
-    <task completionQuantity="1" id="_8" isForCompensation="false" name="Elegir&#10;pedido" startQuantity="1">
+    <userTask completionQuantity="1" id="_8" implementation="##unspecified" isForCompensation="false" name="Elegir&#10;pedido" startQuantity="1">
       <incoming>_9</incoming>
       <outgoing>_11</outgoing>
-    </task>
+    </userTask>
     <sequenceFlow id="_9" sourceRef="_7" targetRef="_8"/>
     <sequenceFlow id="_11" sourceRef="_8" targetRef="_10"/>
     <intermediateThrowEvent id="_10" name="Realizar&#10;pedido">
@@ -158,10 +158,10 @@
         <yaoqiang:label offset-x="4.0" offset-y="0.0" x="0.0" y="6.0"/>
       </extensionElements>
     </sequenceFlow>
-    <task completionQuantity="1" id="_27" isForCompensation="false" name="Reclamar" startQuantity="1">
+    <userTask completionQuantity="1" id="_27" implementation="##unspecified" isForCompensation="false" name="Reclamar" startQuantity="1">
       <incoming>_28</incoming>
       <outgoing>_29</outgoing>
-    </task>
+    </userTask>
     <sequenceFlow id="_28" sourceRef="_16" targetRef="_27"/>
     <sequenceFlow id="_29" sourceRef="_27" targetRef="_14"/>
     <eventBasedGateway eventGatewayType="Exclusive" gatewayDirection="Unspecified" id="_14" instantiate="false" name="Pedido?">
